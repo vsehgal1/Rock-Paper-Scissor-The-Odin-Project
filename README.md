@@ -1,4 +1,4 @@
-The Odin Prject - JavaScript project 1
+The Odin Project - JavaScript project 1
 
 Rock Paper Scissor game made in javascript.
 Computer randomly selects values out of [rock, paper, scissor].
