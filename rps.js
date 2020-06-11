@@ -60,7 +60,7 @@ function round(playerSelection, computerSelection) {
         case (player == 'scissor' && computer == 'paper'):
             return winner(computer, player);
         case (player == computer):
-            return "Same Values!"
+            return sameVal(player, computer);
     }
 
 }
@@ -80,6 +80,23 @@ function winner(str1, str2) {
     }
 
 }
+
+function sameVal(str1, str2) {
+    str1 = str1.charAt(0).toUpperCase() + str1.slice(1);
+    str2 = str2.charAt(0).toUpperCase() + str2.slice(1);
+    const same = document.createElement('p')
+    same.textContent = "Same values! " + str2 + " and " + str1
+    scrs.textContent = "Player " + playerScore + " - " + computerScore + " Computer";
+    results.appendChild(same)
+    if (playerScore === 5) {
+        ending('Player');
+    }
+    else if (computerScore === 5) {
+        ending('Computer');
+    }
+
+}
+
 function loser(str1, str2) {
     str1 = str1.charAt(0).toUpperCase() + str1.slice(1);
     str2 = str2.charAt(0).toUpperCase() + str2.slice(1);
